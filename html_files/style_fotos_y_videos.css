@@ -1,0 +1,88 @@
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #020d16; /* Color de fondo azul oscuro */
+    color: #fff;
+}
+
+li {
+    display: inline; /* Opcional: para que los elementos de la lista estén en línea */
+}
+
+header {
+    background-color: #071f35; /* Color de fondo azul oscuro */
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos horizontalmente */
+    padding: 20px;
+}
+
+.top-row,
+.bottom-row {
+    display: flex;
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.image-grid-item,
+.video-grid-item {
+    flex: 0 0 calc(25% - 20px); /* Establecer el ancho de cada elemento */
+    background-color: #071f35; /* Color de fondo azul oscuro */
+    padding: 20px;
+    margin: 0 10px 20px 10px; /* Ajustar los márgenes */
+    box-sizing: border-box;
+}
+
+.image-grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-grid-item iframe {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: #071f35; /* Color de fondo azul oscuro */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin: 20px 0;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+/* Media query para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .image-grid-item,
+    .video-grid-item {
+        flex: 0 0 calc(50% - 20px); /* Ajustar el ancho para pantallas pequeñas */
+    }
+}

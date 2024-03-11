@@ -1,0 +1,161 @@
+// Estilos base
+%base-styles {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  
+  body {
+    @extend %base-styles;
+    background-color: #020d16;
+    color: #fff;
+  }
+  
+  header {
+    @extend %base-styles;
+    background-color: #071f35;
+    padding: 20px 0;
+  }
+  
+  // Navbar y estilos relacionados
+  .navbar {
+    @extend %base-styles;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  
+  // Estilos para la sección "about-us"
+  .about-us {
+    @extend %base-styles;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+    .Instagram {
+      text-align: center;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  
+  // Estilos para contrataciones
+  .contrataciones {
+    @extend %base-styles;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  
+    .texto {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+  
+      &:hover {
+        color: #ff4500;
+        transition: color 0.3s ease;
+      }
+    }
+  }
+  
+  // Estilos para el pie de página
+  footer {
+    @extend %base-styles;
+    background-color: #071f35;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+  
+    .social-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+  
+      &:hover {
+        color: #00f7ff;
+      }
+    }
+  
+    // Estilos para enlaces de Instagram y correo electrónico
+    .instagram-link,
+    .email-link {
+      @extend %base-styles;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+  
+      &:hover {
+        transition: background-color 0.3s ease;
+      }
+    }
+  
+    .instagram-link {
+      background-color: #361a07;
+  
+      &:hover {
+        background-color: #1f00cc;
+      }
+    }
+  
+    .email-link {
+      background-color: #361a07;
+  
+      &:hover {
+        background-color: #1f00cc;
+      }
+    }
+  
+    h3 {
+      color: #fff;
+    }
+  }
+  
+  // Media query para pantallas pequeñas
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+  
+      a {
+        margin-bottom: 10px;
+      }
+  
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+  
+        li {
+          margin: 10px 0;
+        }
+      }
+  
+      .about-us {
+        padding: 10px;
+      }
+  
+      .text-about-us {
+        width: 100%;
+      }
+    }
+  }
+  

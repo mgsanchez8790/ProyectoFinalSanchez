@@ -1,0 +1,149 @@
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #020d16;
+    color: #fff;
+}
+
+header {
+    background-color: #071f35;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+/* Estilos del carrusel */
+.container {
+    margin: auto;
+    background-color: rgb(15, 1, 1);
+    width: 800px;
+    padding: 30px;
+}
+
+ul.slider {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background: #fff;
+}
+
+ul.slider li img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+}
+
+ul.slider li:target {
+    opacity: 1;
+}
+
+.menu {
+    text-align: center;
+    margin: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+footer {
+    background-color: #071f35;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #00f7ff;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin: 20px 0;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+/* Media query para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .about-us {
+        padding: 10px;
+    }
+
+    .text-about-us {
+        width: 100%;
+    }
+}

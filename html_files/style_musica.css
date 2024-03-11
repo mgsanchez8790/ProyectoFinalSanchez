@@ -1,0 +1,72 @@
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #020d16; /* Fondo de color azul oscuro */
+    color: #fff;
+}
+
+header {
+    background-color: #071f35; /* Color azul oscuro */
+    padding: 20px 0;
+}
+
+li {
+    display: inline; /* Opcional: para que los elementos de la lista estén en línea */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #071f35; /* Color azul oscuro */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin: 20px 0;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+/* Estilos para el contenido de la playlist */
+iframe {
+    border-radius: 12px;
+    margin: 20px auto; /* Centra el iframe */
+    display: block;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+    }
+}

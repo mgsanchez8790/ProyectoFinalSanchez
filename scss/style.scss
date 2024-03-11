@@ -1,0 +1,195 @@
+// Variables
+$color-background: #020d16;
+$color-text: #fff;
+$color-header-bg: #071f35;
+$color-footer-bg: #071f35;
+$color-link: #fff;
+$grid-gap: 20px;
+
+// Estilos generales
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: $color-background;
+  color: $color-text;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Estilos del encabezado
+header {
+  background-color: $color-header-bg;
+  padding: 20px 0;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: $color-text;
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 150px;
+      height: auto;
+      margin-left: 20px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+// Estilos del contenido principal
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: $grid-gap;
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .disco img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .text-about-us {
+      width: 50%;
+    }
+
+    .contact-info {
+      font-size: 24px;
+    }
+
+    .video,
+    .spotify {
+      width: 50%;
+      margin-top: 20px;
+    }
+  }
+}
+
+// Estilos del pie de página
+footer {
+  background-color: $color-footer-bg;
+  padding: 20px 0;
+  text-align: center;
+
+  .social-links a {
+    color: $color-link;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .logo img {
+    width: 150px;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  h3 {
+    color: $color-text;
+  }
+}
+
+// Media queries
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+
+    .logo img {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-top: 10px;
+    }
+  }
+
+  .grid-item {
+    font-size: 20px;
+  }
+
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+
+    .text-about-us {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .video,
+    .spotify {
+      width: 100%;
+    }
+  }
+}
+
+// Estilos específicos
+.Bienvenido {
+  font-size: 36px;
+  color: $color-text;
+  text-align: center;
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+// Animacion
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+    text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00, 0 0 80px #f00;
+  }
+  25% {
+    transform: translateX(-5px);
+    text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00, 0 0 80px #f00;
+  }
+  50% {
+    transform: translateX(0px);
+    text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00, 0 0 80px #f00;
+  }
+  75% {
+    transform: translateX(-5px);
+    text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00, 0 0 80px #f00;
+  }
+  100% {
+    transform: translateX(0);
+    text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00, 0 0 80px #f00;
+  }
+}
+
+@import "components/header";
+@import "components/grid-container";
+@import "components/footer";
+@import "base/mixins"

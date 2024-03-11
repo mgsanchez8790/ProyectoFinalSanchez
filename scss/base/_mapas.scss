@@ -1,0 +1,164 @@
+// Definir colores como un mapa
+$colors: (
+  background: #020d16,
+  text: #fff,
+  header: #071f35,
+  footer: #071f35,
+  link: #fff,
+  linkHover: #2f00ffd0,
+  linkContratacionesHover: #ff4500,
+  linkInstagramBackground: #361a07,
+  linkInstagramHover: #1f00cc,
+);
+
+// Estilos base
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: map-get($colors, background);
+  color: map-get($colors, text);
+}
+
+header {
+  background-color: map-get($colors, header);
+  padding: 20px 0;
+}
+
+// Navbar y estilos relacionados
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  a {
+    color: map-get($colors, text);
+    text-decoration: none;
+  }
+}
+
+// Estilos para la sección "about-us"
+.about-us {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Instagram {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// Estilos para contrataciones
+.contrataciones {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+
+  .texto {
+    color: map-get($colors, text);
+    font-size: 18px;
+    text-decoration: none;
+
+    &:hover {
+      color: map-get($colors, linkContratacionesHover);
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+// Estilos para el pie de página
+footer {
+  background-color: map-get($colors, footer);
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+
+  .social-links a {
+    color: map-get($colors, text);
+    text-decoration: none;
+    margin: 0 10px;
+
+    &:hover {
+      color: #00f7ff;
+    }
+  }
+
+  // Estilos para enlaces de Instagram y correo electrónico
+  .instagram-link,
+  .email-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  .instagram-link {
+    background-color: map-get($colors, linkInstagramBackground);
+
+    &:hover {
+      background-color: map-get($colors, linkInstagramHover);
+    }
+  }
+
+  .email-link {
+    background-color: map-get($colors, linkInstagramBackground);
+
+    &:hover {
+      background-color: map-get($colors, linkInstagramHover);
+    }
+  }
+
+  h3 {
+    color: map-get($colors, text);
+  }
+}
+
+// Media query para pantallas pequeñas
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+
+    .about-us {
+      padding: 10px;
+    }
+
+    .text-about-us {
+      width: 100%;
+    }
+  }
+}
+

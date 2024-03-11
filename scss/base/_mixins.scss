@@ -1,0 +1,164 @@
+// Mixin para estilos de texto
+@mixin text-styles($color: #fff, $size: 16px, $weight: normal, $decoration: none, $transform: none) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    text-decoration: $decoration;
+    text-transform: $transform;
+  }
+  
+  // Mixin para estilos de enlace
+  @mixin link-styles {
+    color: #fff;
+    text-decoration: none;
+  
+    &:hover {
+      color: #00f7ff;
+    }
+  }
+  
+  // Mixin para estilos de botón
+  @mixin button-styles($bg-color: #361a07, $hover-color: #1f00cc) {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $bg-color;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+  
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+  
+  // Estilos base
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #020d16;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #071f35;
+    padding: 20px 0;
+  }
+  
+  // Navbar y estilos relacionados
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    a {
+      @include link-styles;
+    }
+  }
+  
+  // Estilos para la sección "about-us"
+  .about-us {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+    .Instagram {
+      text-align: center;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  
+  // Estilos para contrataciones
+  .contrataciones {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  
+    .texto {
+      @include text-styles($color: #fff, $size: 18px);
+      @include link-styles;
+  
+      &:hover {
+        color: #ff4500;
+        transition: color 0.3s ease;
+      }
+    }
+  }
+  
+  // Estilos para el pie de página
+  footer {
+    background-color: #071f35;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+  
+    .social-links a {
+      @include link-styles;
+      margin: 0 10px;
+    }
+  
+    // Estilos para enlaces de Instagram y correo electrónico
+    .instagram-link,
+    .email-link {
+      @include button-styles;
+    }
+  
+    .instagram-link {
+      &:hover {
+        background-color: #1f00cc;
+      }
+    }
+  
+    .email-link {
+      &:hover {
+        background-color: #1f00cc;
+      }
+    }
+  
+    h3 {
+      @include text-styles($color: #fff);
+    }
+  }
+  
+  // Media query para pantallas pequeñas
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+  
+      a {
+        margin-bottom: 10px;
+      }
+  
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+  
+        li {
+          margin: 10px 0;
+        }
+      }
+  
+      .about-us {
+        padding: 10px;
+      }
+  
+      .text-about-us {
+        width: 100%;
+      }
+    }
+  }
+  
